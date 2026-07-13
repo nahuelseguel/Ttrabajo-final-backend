@@ -9,6 +9,7 @@ import { User } from './users/entities/user.entity';
 import { Order } from './orders/entities/order.entity';
 import { TrackingEvent } from './tracking/entities/tracking-event.entity';
 
+//configuracion postgres con typeorm
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),

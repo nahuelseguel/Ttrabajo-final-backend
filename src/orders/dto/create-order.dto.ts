@@ -2,6 +2,7 @@ import { IsBoolean, IsEnum, IsNotEmpty, IsNumber, IsOptional, IsPositive, IsStri
 import { Type, Transform } from 'class-transformer';
 import { OrderStatus } from '../entities/order-status.enum';
 
+//validación de datos
 export class CreateOrderDto {
   @IsNotEmpty()
   @IsString()

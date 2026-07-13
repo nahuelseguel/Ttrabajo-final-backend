@@ -75,6 +75,15 @@ export class OrdersService {
         orderId:     order.id,
         status:      dto.status,
         description: `Estado actualizado a ${dto.status}`,
+        location:    dto.location,
+        operatorId:  user.id,
+      });
+    } else if (dto.location) {
+      await this.trackingService.create({
+        orderId:     order.id,
+        status:      order.status,
+        description: `Registro en ${dto.location}`,
+        location:    dto.location,
         operatorId:  user.id,
       });
     }
